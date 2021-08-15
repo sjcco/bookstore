@@ -25,6 +25,12 @@ const BooksForm = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    e.target.querySelector('#title').value = '';
+    e.target.querySelector('#category').value = 'Action';
+    setBook({
+      title: '',
+      category: 'Action',
+    });
     // eslint-disable-next-line react/prop-types
     props.dispatch(CREATE_BOOK(book));
   };
