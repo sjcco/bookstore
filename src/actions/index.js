@@ -1,6 +1,12 @@
+import uniqueId from '../helpers';
+
 const CREATE_BOOK = book => ({
   type: 'CREATE_BOOK',
-  payload: book,
+  payload: {
+    id: uniqueId(),
+    title: book.title,
+    category: book.category,
+  },
 });
 
 const REMOVE_BOOK = book => ({

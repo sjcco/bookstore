@@ -5,8 +5,7 @@ import { createStore } from 'redux';
 import App from './components/App';
 import rootReducer from './reducers';
 import './index.css';
-
-const uniqueId = () => Math.floor(Math.random() * 9000000000) + 1;
+import uniqueId from './helpers';
 
 const books = [
   {
