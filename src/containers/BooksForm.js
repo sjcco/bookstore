@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { connect } from 'react-redux';
 import { CREATE_BOOK } from '../actions';
+import { categories } from '../helpers';
 
 const BooksForm = props => {
-  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const [book, setBook] = useState({
     title: '',
     category: 'Action',
