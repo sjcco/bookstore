@@ -1,4 +1,4 @@
-import uniqueId from '../helpers';
+import { uniqueId } from '../helpers';
 
 const CREATE_BOOK = book => ({
   type: 'CREATE_BOOK',
@@ -14,4 +14,9 @@ const REMOVE_BOOK = book => ({
   payload: book,
 });
 
-export { CREATE_BOOK, REMOVE_BOOK };
+const CHANGE_FILTER = filter => ({
+  type: 'CHANGE_FILTER',
+  payload: filter,
+});
+
+export { CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER };

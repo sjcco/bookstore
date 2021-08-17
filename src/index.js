@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import App from './components/App';
 import rootReducer from './reducers';
 import './index.css';
-import uniqueId from './helpers';
+import { uniqueId } from './helpers';
 
 const books = [
   {
