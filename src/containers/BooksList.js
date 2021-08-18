@@ -17,19 +17,10 @@ const BookList = () => {
   return (
     <>
       <CategoryFilter filterHandler={handleFilter} />
-      <table>
-        <thead>
-          <tr>
-            <th>book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {books.map(book => (<Book key={book.id} book={book} removeBook={handleRemoveBook} />))}
-        </tbody>
-      </table>
+      <div className="container">
+        {books.map(book => (
+          <Book key={book.id} book={book} removeBook={handleRemoveBook} />))}
+      </div>
     </>
   );
 };

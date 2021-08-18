@@ -6,7 +6,7 @@ const CategoryFilter = ({ filterHandler }) => {
   const allCategories = ['All', ...categories];
   return (
     <>
-      <select onChange={e => filterHandler(e.target.value)}>
+      <select className="select" onChange={e => filterHandler(e.target.value)}>
         {allCategories.map(category => <option key={category} value={category}>{category}</option>)}
       </select>
     </>
