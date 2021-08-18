@@ -36,14 +36,20 @@ const BooksForm = props => {
   };
 
   return (
-    <form className="container mb-5" onSubmit={handleSubmit}>
-
-      <input className="title mx-2" type="text" id="title" placeholder="Title" onChange={handleChange} />
-      <select className="select ms-2" name="category" id="category" onChange={handleChange}>
-        {categories.map(category => <option key={category} value={category}>{category}</option>)}
-      </select>
-      <button className="btn btn-primary" type="submit">Save</button>
-    </form>
+    <>
+      <h2 className="mt-3 mx-5 add-book">ADD NEW BOOK</h2>
+      <form className="container mb-5 px-4" onSubmit={handleSubmit}>
+        <div className="row my-auto">
+          <input className="title col-5" type="text" id="title" placeholder="Title" onChange={handleChange} />
+          <select className="select-category col-3" name="category" id="category" onChange={handleChange}>
+            {categories.map(
+              category => <option key={category} value={category}>{category}</option>,
+            )}
+          </select>
+          <button className="btn btn-primary col-3" type="submit">Save</button>
+        </div>
+      </form>
+    </>
   );
 };
 
