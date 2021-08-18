@@ -4,6 +4,8 @@
 
 ![screenshot](./screenshot.png)
 
+This is a a bookstore built with React and Redux
+
 ## Built With
 
 - Javascript

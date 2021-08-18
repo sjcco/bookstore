@@ -37,7 +37,9 @@ const BooksForm = props => {
 
   return (
     <>
-      <h2 className="mt-3 mx-5 add-book">ADD NEW BOOK</h2>
+      <div className="container">
+        <h2 className="mt-3 mx-3 add-book">ADD NEW BOOK</h2>
+      </div>
       <form className="container mb-5 px-4" onSubmit={handleSubmit}>
         <div className="row my-auto justify-content-between">
           <input className="title col-5" type="text" id="title" placeholder="Title" onChange={handleChange} />
