@@ -39,14 +39,14 @@ const BooksForm = props => {
     <>
       <h2 className="mt-3 mx-5 add-book">ADD NEW BOOK</h2>
       <form className="container mb-5 px-4" onSubmit={handleSubmit}>
-        <div className="row my-auto">
+        <div className="row my-auto justify-content-between">
           <input className="title col-5" type="text" id="title" placeholder="Title" onChange={handleChange} />
           <select className="select-category col-3" name="category" id="category" onChange={handleChange}>
             {categories.map(
               category => <option key={category} value={category}>{category}</option>,
             )}
           </select>
-          <button className="btn btn-primary col-3" type="submit">Save</button>
+          <button className="btn btn-primary col-2" type="submit">ADD BOOK</button>
         </div>
       </form>
     </>
